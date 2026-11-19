@@ -1,5 +1,5 @@
 
-const WA="905465741867";
+const WA="905386784637";
 const hd=document.querySelector("header");
 addEventListener("scroll",()=>hd.classList.toggle("solid",scrollY>40));
 const nt=document.getElementById("nt"),nv=document.getElementById("nav");
@@ -7,7 +7,7 @@ if(nt)nt.addEventListener("click",()=>nv.classList.toggle("open"));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll(".rv").forEach(e=>io.observe(e));
 const lb=document.getElementById("lb");
-if(lb){document.querySelectorAll(".mos div,.sq div").forEach(d=>d.addEventListener("click",()=>{lb.querySelector("img").src=d.querySelector("img").src;lb.classList.add("on")}));
+if(lb){document.querySelectorAll(".mos div,.sq div,.feat div").forEach(d=>d.addEventListener("click",()=>{lb.querySelector("img").src=d.querySelector("img").src;lb.classList.add("on")}));
 lb.addEventListener("click",()=>lb.classList.remove("on"));addEventListener("keydown",e=>{if(e.key==="Escape")lb.classList.remove("on")});}
 document.querySelectorAll("a.wa").forEach(a=>{const m=a.dataset.msg||"Merhaba, Fibmod ürünleri hakkında bilgi almak istiyorum.";a.href="https://wa.me/"+WA+"?text="+encodeURIComponent(m);a.target="_blank";a.rel="noopener"});
 const fl=document.getElementById("filters");
